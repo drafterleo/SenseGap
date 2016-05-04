@@ -9,6 +9,7 @@ class CColorPicture : public QObject
 public:
     explicit CColorPicture(QObject *parent = 0);
 
+
 signals:
 
 public slots:

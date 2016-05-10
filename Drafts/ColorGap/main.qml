@@ -8,6 +8,14 @@ Window {
     height: 500
     visible: true
 
+    MouseArea {
+        id: mouseArea1
+        anchors.fill: parent
+        onClicked: {
+            Qt.quit();
+        }
+    }
+
     ColorPicture {
         id: pic
         x: 0
@@ -24,14 +32,6 @@ Window {
         width: 200
         height: 200
         //anchors.centerIn: parent
-    }
-
-    MouseArea {
-        id: mouseArea1
-        anchors.fill: parent
-        onClicked: {
-            Qt.quit();
-        }
     }
 
     Button {

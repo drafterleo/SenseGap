@@ -1,8 +1,10 @@
 #include "colorpicture.h"
+#include <QtDebug>
 
 ColorPicture::ColorPicture(QQuickItem *parent): QQuickPaintedItem(parent)
 {
     setAntialiasing(true);
+    setAcceptedMouseButtons(Qt::AllButtons);
     genRandom(5);
 }
 
@@ -17,6 +19,16 @@ void ColorPicture::clearColorForms()
         delete m_colorForms.takeFirst();
     }
     update();
+}
+
+void ColorPicture::mouseMoveEvent(QMouseEvent *event)
+{
+    //qDebug() << "mouse";
+}
+
+void ColorPicture::mousePressEvent(QMouseEvent *event)
+{
+    //qDebug() << "mouse press";
 }
 
 void ColorPicture::paint(QPainter *painter)

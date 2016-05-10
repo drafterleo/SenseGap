@@ -2,6 +2,7 @@
 #define COLORPICTURE_H
 
 #include <QQuickPaintedItem>
+#include <QMouseEvent>
 #include "colorforms.h"
 
 class ColorPicture : public QQuickPaintedItem
@@ -30,6 +31,8 @@ public slots:
 
 protected:
     void clearColorForms();
+    void mouseMoveEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
 
 private:
     QVector <AbstractColorForm *> m_colorForms;
